@@ -1,0 +1,22 @@
+<div class="container cont_init">
+  <div class="row">
+    <div class="col-xl-12 col-sm-12">
+      <div class="card">
+        <form class="form_data_save" [formGroup]="formLogin" (ngSubmit)="login()">
+          <h1>Login</h1>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input formControlName="email" type="email" class="form-control" id="email">
+            <div class="form-text"></div>
+          </div>
+          <div class="mb-3">
+            <label for="password" class="form-label">Contraseña</label>
+            <input formControlName="password" type="password" class="form-control" id="password">
+            <div class="form-text"></div>
+          </div>
+          <button type="submit" class="btn btn-success">Ingresar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

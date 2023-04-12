@@ -1,0 +1,20 @@
+<div class="container cont_init">
+  <div class="row">
+    <div class="col-xl-12 col-sm-12">
+      <div class="card">
+        <div class="cont_close">
+          <button routerLink="/home/type_user" type="button" class="btn-close" aria-label="Close"></button>
+        </div>
+        <h1>Editar tipo de usuario</h1>
+        <form class="form_data_save" [formGroup]="formEditTypeUser" (ngSubmit)="editTypeUser()">
+          <div class="mb-3">
+            <label for="name" class="form-label">Tipo de usuario</label>
+            <input formControlName="name" type="text" class="form-control" id="name">
+            <div class="form-text"></div>
+          </div>
+          <button type="submit" class="btn btn-success">Editar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

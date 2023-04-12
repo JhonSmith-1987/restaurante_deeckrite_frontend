@@ -1,0 +1,47 @@
+<div class="container cont_init">
+  <div class="row">
+    <div class="col-xl-12 col-sm-12">
+      <div class="card">
+        <div class="card-body">
+          <div class="messages">{{messages}}</div>
+          <form class="form_data_save" [formGroup]="formCreateProduct" (ngSubmit)="createProduct()">
+            <h1>Imagen del producto</h1>
+            <div class="mb-3">
+              <label for="File" class="form-label"></label>
+              <input (change)="handleImage($event)" formControlName="imgRef" class="form-control" type="file" id="File">
+            </div>
+            <h1>Crear productos</h1>
+            <div class="mb-3">
+              <label for="name" class="form-label">Nombre del producto</label>
+              <input formControlName="name" type="text" class="form-control" id="name">
+              <div class="form-text"></div>
+            </div>
+            <div class="mb-3">
+              <label for="value" class="form-label">Valor del producto</label>
+              <input formControlName="value" type="number" class="form-control" id="value">
+              <div class="form-text"></div>
+            </div>
+            <div class="form-floating">
+              <textarea formControlName="description" class="form-control" id="description"></textarea>
+              <label for="description">Descripción del producto</label>
+            </div>
+            <div class="mb-3">
+              <label for="category" class="form-label">Categoría</label>
+              <select formControlName="category" id="category" class="form-select form-select-sm" aria-label=".form-select-sm example">
+                <option *ngFor="let typeUser of categories" value="{{typeUser.name}}">{{typeUser.name}}</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="client_id" class="form-label">Cliente</label>
+              <select formControlName="client_id" id="client_id" class="form-select form-select-sm" aria-label=".form-select-sm example">
+                <option *ngFor="let client of clients" value="{{client.id}}">{{client.name_restaurant}}</option>
+              </select>
+            </div>
+            <button [disabled]="formCreateProduct.invalid" type="submit" class="btn btn-success">Crear producto</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

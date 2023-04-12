@@ -1,0 +1,34 @@
+<div class="cont_menu_client">
+  <img class="img_top_left" src="assets/img/img-superior-izquierda.jpeg">
+  <img class="img_bottom_right" src="assets/img/img-inferior-derecha.jpeg">
+  <div class="border_menu">
+    <div class="title_menu">
+      <span>{{client_user.name_restaurant}}</span>
+      <span>Menu</span>
+    </div>
+    <div class="list_menu">
+      <div class="row flex_row">
+        <div routerLink="/product_category/{{id}}/{{category.name}}" class="col-xl-4" *ngFor="let category of categories">
+          {{category.name}}
+        </div>
+      </div>
+    </div>
+    <div class="data_client">
+      <div class="row flex_column">
+        <div class="col-xl-4">
+          {{client_user.name_restaurant}}
+        </div>
+        <div class="col-xl-4">
+          {{client_user.address}}
+        </div>
+        <div class="col-xl-4">
+          {{client_user.email}}
+        </div>
+        <div class="col-xl-4">
+          {{client_user.phone}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

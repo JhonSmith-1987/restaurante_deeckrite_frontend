@@ -1,1 +1,55 @@
 /* You can add global styles to this file, and also import other style files */
+
+.cont_init {
+  margin: 4rem auto;
+}
+.form_data_save {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 60%;
+  margin: auto;
+}
+.img_delete {
+  width: 20px;
+  cursor: pointer;
+  margin-right: 1rem;
+}
+.cont_close {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: end;
+  padding: 1rem 2rem;
+}
+.card_img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  height: 80vh;
+  padding: 1rem;
+}
+.img_card {
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+}
+.card_body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+}
+.cont_card {
+  padding: 8px;
+}
